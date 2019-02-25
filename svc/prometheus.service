@@ -1,0 +1,14 @@
+[Unit]
+Description=Prometheus Server
+Documentation=https://prometheus.io/docs/introduction/overview/
+After=network-online.target
+
+[Service]
+User=prometheus
+Restart=on-failure
+ExecStart=/srv/prometheus/prometheus \
+  --config.file=/srv/prometheus/prometheus.yml \
+  --storage.tsdb.path=/srv/prometheus/data
+ExecReload=/bin/kill -HUP $MAINPID
+[Install]
+WantedBy=multi-user.target
