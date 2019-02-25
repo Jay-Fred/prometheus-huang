@@ -1,0 +1,14 @@
+[Unit]
+Description=Alertmanager
+After=network.target
+
+[Service]
+Type=simple
+User=prometheus
+ExecStart=/srv/alertmanager/alertmanager \
+   --config.file=/srv/alertmanager/alertmanager.yml 
+   --storage.path=/srv/alertmanager/data
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
