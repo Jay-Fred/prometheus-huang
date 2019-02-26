@@ -1,0 +1,10 @@
+...
+receivers:
+- name: 'slack-channel'
+  slack_configs:
+  - channel: #monitoring
+    api_url: 'https://hooks.slack.com/services/TGGQZ8GPN/BGGRF1XNG/xx'
+    icon_url: 'https://avatars3.githubusercontent.com/u/3380462'
+    send_resolved: true
+    title: '{{ template "custom_title" . }}'
+    text: '{{ template "custom_slack_message" . }}'
