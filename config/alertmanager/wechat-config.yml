@@ -1,0 +1,11 @@
+global:
+  wechat_api_url: 'https://qyapi.weixin.qq.com/cgi-bin/'
+...
+receivers:
+- name: 'wechat'
+  wechat_configs:
+  - send_resolved: true
+    to_party: '1'
+    agent_id: '1000006'
+    corp_id: 'xx'
+    api_secret: 'xx'

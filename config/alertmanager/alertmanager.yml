@@ -22,6 +22,7 @@ receivers:
 - name: 'default-receiver'
   email_configs:
   - to: 'xx@xx.com'
+    send_resolved: true
     html: '{{ template "email.default.html" . }}'
     headers: { Subject: "Prometheus 报警邮件" }
 - name: 'wechat'
