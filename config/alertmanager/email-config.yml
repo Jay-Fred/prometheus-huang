@@ -1,0 +1,15 @@
+global:
+  smtp_smarthost: 'smtp.163.com:25'
+  smtp_from: 'xx@xx.com'
+  smtp_auth_username: 'xx@xx.com'
+  smtp_auth_password: 'xx'
+  smtp_require_tls: false
+
+...
+receivers:
+- name: 'email-receiver'
+  email_configs:
+  - to: 'xx@xx.com'
+    send_resolved: true
+    html: '{{ template "email.default.html" . }}'
+    headers: { Subject: "Prometheus 报警邮件" }
