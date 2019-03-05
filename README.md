@@ -1,2 +1,1 @@
-# prometheus-huang
-关于prometheus的一些配置文件及模板文件
+关于 prometheus 的一些配置文件及模板文件
