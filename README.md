@@ -1,1 +1,1 @@
-关于 prometheus 的一些配置文件及模板文件
+关于 prometheus 监控的一些配置文件、模板文件
